@@ -1,14 +1,14 @@
  <!--form handling-->
- <form method="POST" id="update_user">
+ <form action="/api/users" method="POST" id="add_user">
     <div class="new_user">
         <div class="form-group">
             <label for="name" class='dark'>Name</label>
             <input type="hidden" name="id" value=""/>
-            <input type="text" name="value" placeholder="Eldad Mwangi"  />
+            <input type="text" name="name" value="" placeholder="Eldad Mwangi"  />
         </div>
         <div class="form-group">
             <label for="email" class='dark'>Email</label>
-            <input type="text" name="email" placeholder="eldad@gmail.com"  />
+            <input type="text" name="email" value="" placeholder="eldad@gmail.com"  />
         </div>
         <!--GENDER-->
         <div class="form-group">
@@ -19,7 +19,7 @@
             </div>
             <div class="radio inline">
                 <input type="radio" id="radio-2" name="gender" value="female" />
-                <label for="radio-2" class="radio-label">Male</label>
+                <label for="radio-2" class="radio-label">Female</label>
             </div>
         </div>
         <!--STATUS-->

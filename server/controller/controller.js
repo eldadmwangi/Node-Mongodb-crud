@@ -19,7 +19,8 @@ exports.create = (req, res) => {
   user
     .save(user)
     .then((data) => {
-      res.send(data);
+      res.redirect("/add-user");
+      // res.send(data);
     })
     .catch((err) => {
       res.status(500).send({
@@ -42,9 +43,9 @@ exports.find = (req, res) => {
         }
       })
       .catch((err) => {
-        res
-          .status(500)
-          .send({ message: `error retrieving the user with:${id} ` });
+        res.status(500).send({
+          message: err.message || `error retrieving the user with:${id} `,
+        });
       });
     //all users now
   } else {
